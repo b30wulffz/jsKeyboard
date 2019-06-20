@@ -1,0 +1,45 @@
+body{
+    /* background: url(); */
+    background-image: linear-gradient(to bottom right, red, yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.key-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: thick solid black;
+    box-shadow: 20px 20px 0px 0px black;
+    height:50vh;
+}
+
+.key{
+    border: thin solid black;
+    height: inherit;
+    width:6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.07s ease-in-out;
+    background: white;
+    opacity: 0.7;
+}
+
+.key kbd{
+    transform: scale(2);
+    background: black;
+    color: white;
+    border: thin solid black;   
+    padding: 2px 5px;
+}
+
+.playing{
+    transform: scale(1.05);
+    border: 5px solid black;  
+    opacity: 1;
+}
