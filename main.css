@@ -1,6 +1,8 @@
-body{
-    /* background: url(); */
-    background-image: linear-gradient(to bottom right, red, yellow);
+body{  
+    background: #70e1f5; 
+    background: -webkit-linear-gradient(to bottom, #ffd194, #70e1f5);
+    background: linear-gradient(to bottom, #ffd194, #70e1f5); 
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -46,4 +48,8 @@ body{
 
 audio{
     display: none;
+}
+
+h1, h3{
+    transform: scale(1.5);
 }
