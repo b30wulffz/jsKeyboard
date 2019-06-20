@@ -43,3 +43,7 @@ body{
     border: 5px solid black;  
     opacity: 1;
 }
+
+audio{
+    display: none;
+}
