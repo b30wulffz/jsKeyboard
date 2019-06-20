@@ -7,51 +7,51 @@
     <body>
         <h1><kbd>JS KeyBoard</kbd></h1>
         <div class="key-group">
-            <div class="key" data-key="81">
+            <div class="key" data-key="81" onclick="clickPlay(81)">
                 <kbd>q</kbd>
                 <span>A</span>
             </div>
-            <div class="key" data-key="87">
+            <div class="key" data-key="87" onclick="clickPlay(87)">
                 <kbd>w</kbd>
                 <span>B</span>
             </div>
-            <div class="key" data-key="69">
+            <div class="key" data-key="69" onclick="clickPlay(69)">
                 <kbd>e</kbd>
                 <span>B#</span>
             </div>
-            <div class="key" data-key="82">
+            <div class="key" data-key="82" onclick="clickPlay(82)">
                 <kbd>r</kbd>
                 <span>C</span>
             </div>
-            <div class="key" data-key="84">
+            <div class="key" data-key="84" onclick="clickPlay(84)">
                 <kbd>t</kbd>
                 <span>C#</span>
             </div>
-            <div class="key" data-key="89">
+            <div class="key" data-key="89" onclick="clickPlay(89)">
                 <kbd>y</kbd>
                 <span>D</span>
             </div>
-            <div class="key" data-key="85">
+            <div class="key" data-key="85" onclick="clickPlay(85)">
                 <kbd>u</kbd>
                 <span>E</span>
             </div>
-            <div class="key" data-key="73">
+            <div class="key" data-key="73" onclick="clickPlay(73)">
                 <kbd>i</kbd>
                 <span>E#</span>
             </div>
-            <div class="key" data-key="79">
+            <div class="key" data-key="79" onclick="clickPlay(79)">
                 <kbd>o</kbd>
                 <span>F</span>
             </div>
-            <div class="key" data-key="80">
+            <div class="key" data-key="80" onclick="clickPlay(80)">
                 <kbd>p</kbd>
                 <span>F#</span>
             </div>
-            <div class="key" data-key="219">
+            <div class="key" data-key="219" onclick="clickPlay(219)">
                 <kbd>[</kbd>
                 <span>G</span>
             </div>
-            <div class="key" data-key="221">
+            <div class="key" data-key="221" onclick="clickPlay(221)">
                 <kbd>]</kbd>
                 <span>G#</span>
             </div>
@@ -89,6 +89,15 @@
             keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
             window.addEventListener("keydown", playSound);
+
+            function clickPlay(keyCode){
+                var audio= document.querySelector(`audio[data-key="${keyCode}"]`);
+                var element= document.querySelector(`div[data-key="${keyCode}"]`);
+                audio.currentTime = 0;
+                audio.play();
+                element.classList.add('playing');
+            }
+
         </script>
     </body>
 </html>

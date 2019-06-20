@@ -32,6 +32,10 @@ body{
     opacity: 0.7;
 }
 
+.key:hover{
+    cursor: pointer;
+}
+
 .key kbd{
     transform: scale(2);
     background: black;
